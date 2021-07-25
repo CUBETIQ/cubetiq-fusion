@@ -1,7 +1,9 @@
-# Custom project from start.vaadin.com
+# CUBETIQ Fusion
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+- Spring Boot
+- Vaadin Fusion (21+)
+- TypeScript
+- Java 11
 
 ## Running the application
 The project is a standard Maven project. To run it from the command line,
@@ -37,16 +39,6 @@ CSS styles</td></tr>
 source directory, contains the server-side Java views</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>Application.java</code></td><td>Server entry-point</td></tr>
 </table>
-
-## Useful links
-
-- Read the documentation at [vaadin.com/docs](https://vaadin.com/docs/latest/).
-- Create new projects at [start.vaadin.com](https://start.vaadin.com/).
-- Search UI components and their usage examples at [vaadin.com/components](https://vaadin.com/components).
-- Find a collection of solutions to common use cases in [Vaadin Cookbook](https://cookbook.vaadin.com/).
-- Find Add-ons at [vaadin.com/directory](https://vaadin.com/directory).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/vaadin) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
-- Report issues, create pull requests in [GitHub](https://github.com/vaadin/).
 
 ## Deploying using Docker
 
