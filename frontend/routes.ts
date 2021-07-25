@@ -1,5 +1,5 @@
 import { Route } from '@vaadin/router';
-import Role from './generated/com/example/application/data/Role';
+import Role from './generated/com/cubetiqs/fusion/data/Role';
 import { appStore } from './stores/app-store';
 import './views/home/home-view';
 import './views/main-layout';
