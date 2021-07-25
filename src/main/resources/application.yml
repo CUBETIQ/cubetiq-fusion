@@ -6,6 +6,9 @@ logging:
     org.atmosphere: warn
 
 spring:
+  session:
+    store-type: redis
+
   mustache:
     check-template-location: false
 
