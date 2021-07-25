@@ -3,12 +3,10 @@ server:
 
 logging:
   level:
-    org.atmosphere: warn
+    org:
+      atmosphere: warn
 
 spring:
-  session:
-    store-type: redis
-
   mustache:
     check-template-location: false
 

@@ -1,8 +1,13 @@
+import { Flow } from "@vaadin/flow-frontend";
 import { Route } from '@vaadin/router';
 import Role from './generated/com/cubetiqs/fusion/data/Role';
 import { appStore } from './stores/app-store';
 import './views/home/home-view';
 import './views/main-layout';
+
+const { serverSideRoutes } = new Flow({
+  imports: () => import('../target/frontend/generated-flow-imports'),
+});
 
 export type ViewRoute = Route & {
   title?: string;
@@ -65,7 +70,11 @@ export const routes: ViewRoute[] = [
   {
     path: '',
     component: 'main-layout',
-    children: [...views],
+    children: [
+        ...views,
+      // for server-side, the next magic line sends all unmatched routes:
+      ...serverSideRoutes, // IMPORTANT: this must be the last entry in the array
+    ],
   },
   {
     path: 'login',

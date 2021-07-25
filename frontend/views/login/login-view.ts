@@ -30,7 +30,7 @@ export class LoginView extends View {
         action="login"
         no-forgot-password
         .i18n=${Object.assign(
-          { header: { title: 'Fusion Management', description: 'Login using user/user or admin/admin' } },
+          { header: { title: 'Fusion', description: 'Login using user/user or admin/admin' } },
           loginI18nDefault
         )}
       >
