@@ -5,7 +5,7 @@ import { UserEndpoint } from 'Frontend/generated/UserEndpoint';
 import { makeAutoObservable } from 'mobx';
 
 export class AppStore {
-  applicationName = 'Fusion Management';
+  applicationName = 'Fusion';
 
   // The location, relative to the base path, e.g. "hello" when viewing "/hello"
   location = '';

@@ -5,6 +5,6 @@ import { View } from '../../views/view';
 @customElement('admin-view')
 export class AdminView extends View {
   render() {
-    return html`<div>Content placeholder</div>`;
+    return html`<div>Admin</div>`;
   }
 }
