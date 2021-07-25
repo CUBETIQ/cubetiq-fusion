@@ -12,9 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Endpoint
 @AnonymousAllowed
 public class UserEndpoint {
+    private final AuthenticatedUser authenticatedUser;
 
     @Autowired
-    private AuthenticatedUser authenticatedUser;
+    public UserEndpoint(AuthenticatedUser authenticatedUser) {
+        this.authenticatedUser = authenticatedUser;
+    }
 
     public Optional<User> getAuthenticatedUser() {
         return authenticatedUser.get();

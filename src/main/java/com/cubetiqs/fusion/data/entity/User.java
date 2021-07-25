@@ -13,7 +13,6 @@ import javax.persistence.Lob;
 
 @Entity
 public class User extends AbstractEntity {
-
     @Nonnull
     private String username;
     @Nonnull

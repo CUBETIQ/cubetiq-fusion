@@ -16,9 +16,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AuthenticatedUser {
+    private final UserRepository userRepository;
 
     @Autowired
-    private UserRepository userRepository;
+    public AuthenticatedUser(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     private UserDetails getAuthenticatedUser() {
         SecurityContext context = SecurityContextHolder.getContext();

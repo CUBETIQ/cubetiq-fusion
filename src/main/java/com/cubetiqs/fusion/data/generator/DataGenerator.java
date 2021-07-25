@@ -1,21 +1,16 @@
 package com.cubetiqs.fusion.data.generator;
 
-import com.vaadin.flow.spring.annotation.SpringComponent;
-
-import com.cubetiqs.fusion.data.service.UserRepository;
-import com.cubetiqs.fusion.data.entity.User;
-import java.util.Collections;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import com.cubetiqs.fusion.data.Role;
-
-import java.time.LocalDateTime;
-
+import com.cubetiqs.fusion.data.entity.User;
+import com.cubetiqs.fusion.data.service.UserRepository;
+import com.vaadin.flow.spring.annotation.SpringComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
-import org.vaadin.artur.exampledata.DataType;
-import org.vaadin.artur.exampledata.ExampleDataGenerator;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.Collections;
 
 @SpringComponent
 public class DataGenerator {
@@ -28,7 +23,6 @@ public class DataGenerator {
                 logger.info("Using existing database");
                 return;
             }
-            int seed = 123;
 
             logger.info("Generating demo data");
 
