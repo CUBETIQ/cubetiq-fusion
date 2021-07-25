@@ -1,9 +1,10 @@
 # CUBETIQ Fusion
 
-- Spring Boot
+- Spring Boot 2.5+
 - Vaadin Fusion (21+)
 - TypeScript
-- Java 11
+- Java 11+
+- Kotlin 1.5+
 
 ## Running the application
 The project is a standard Maven project. To run it from the command line,
