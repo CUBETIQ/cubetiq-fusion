@@ -5,13 +5,14 @@
     <!-- Vaadin project from https://start.vaadin.com/project/adc988bd-b0ed-4fc8-ba45-7df6875fb209 -->
     <groupId>com.cubetiqs.fusion</groupId>
     <artifactId>fusionmanagement</artifactId>
-    <name>Project base for Spring Boot and Vaadin Flow</name>
+    <name>CUBETIQ Vaadin Fusion Project</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <java.version>11</java.version>
         <vaadin.version>21.0.0.alpha10</vaadin.version>
+        <kotlin.version>1.5.21</kotlin.version>
     </properties>
 
     <parent>
@@ -78,6 +79,15 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
             <artifactId>vaadin</artifactId>
@@ -122,6 +132,7 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -153,6 +164,10 @@
     </dependencies>
 
     <build>
+        <!-- Kotlin compiled source -->
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+
         <defaultGoal>spring-boot:run</defaultGoal>
         <plugins>
             <plugin>
@@ -183,6 +198,28 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Kotlin plugin -->
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <configuration>
+                    <args>
+                        <arg>-Xjsr305=strict</arg>
+                    </args>
+                    <compilerPlugins>
+                        <plugin>spring</plugin>
+                    </compilerPlugins>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jetbrains.kotlin</groupId>
+                        <artifactId>kotlin-maven-allopen</artifactId>
+                        <version>${kotlin.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
         </plugins>
     </build>
 
