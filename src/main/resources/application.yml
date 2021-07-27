@@ -1,12 +1,11 @@
-server:
-  port: ${PORT:8080}
-
 logging:
   level:
     org:
       atmosphere: warn
 
 spring:
+  profiles:
+    active: ${APP_PROFILE:dev}
   mustache:
     check-template-location: false
 

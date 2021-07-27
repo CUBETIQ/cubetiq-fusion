@@ -4,13 +4,13 @@ import com.vaadin.flow.component.dependency.NpmPackage
 import com.vaadin.flow.component.page.AppShellConfigurator
 import com.vaadin.flow.server.PWA
 import com.vaadin.flow.theme.Theme
-import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
-@Theme(value = "fusionmanagement")
-@PWA(name = "Fusion Management", shortName = "Fusion Management", offlineResources = ["images/logo.png"])
+@Theme(value = "fusion")
+@PWA(name = "CUBETIQ Fusion", shortName = "Fusion", offlineResources = ["images/logo.png"])
 @NpmPackage.Container(
     NpmPackage(value = "@fontsource/roboto", version = "4.5.0"),
     NpmPackage(value = "@adobe/lit-mobx", version = "2.0.0-rc.4"),
@@ -20,5 +20,5 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 class Application : SpringBootServletInitializer(), AppShellConfigurator
 
 fun main(args: Array<String>) {
-    SpringApplication.run(Application::class.java, *args)
+    runApplication<Application>(*args)
 }

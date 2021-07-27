@@ -1,11 +1,16 @@
 package com.cubetiqs.fusion.frontend.views.test
 
+import com.vaadin.flow.component.button.Button
 import com.vaadin.flow.component.html.Div
 import com.vaadin.flow.router.Route
+import com.vaadin.flow.server.auth.AnonymousAllowed
 
-@Route("/views/test")
+@Route("/test")
+@AnonymousAllowed
 class TestView : Div() {
     init {
-        add("Hello World")
+        add(
+            Button("Hello World")
+        )
     }
 }

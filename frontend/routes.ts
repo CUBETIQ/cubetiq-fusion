@@ -9,6 +9,9 @@ const { serverSideRoutes } = new Flow({
   imports: () => import('../target/frontend/generated-flow-imports'),
 });
 
+
+console.log("serverSideRoutes", serverSideRoutes)
+
 export type ViewRoute = Route & {
   title?: string;
   icon?: string;
@@ -68,15 +71,6 @@ export const views: ViewRoute[] = [
 ];
 export const routes: ViewRoute[] = [
   {
-    path: '',
-    component: 'main-layout',
-    children: [
-        ...views,
-      // for server-side, the next magic line sends all unmatched routes:
-      ...serverSideRoutes, // IMPORTANT: this must be the last entry in the array
-    ],
-  },
-  {
     path: 'login',
     component: 'login-view',
     icon: '',
@@ -86,4 +80,18 @@ export const routes: ViewRoute[] = [
       return;
     },
   },
+  {
+    path: '',
+    component: 'main-layout',
+    children: [
+        ...views,
+    ],
+  },
+  {
+    path: '',
+    component: 'server-layout',
+    children: [
+      ...serverSideRoutes,
+    ]
+  }
 ];
