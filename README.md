@@ -33,12 +33,15 @@ Once the JAR file is built, you can run it using
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.html</code></td><td>HTML template</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.ts</code></td><td>Frontend entrypoint, contains the client-side routing setup using <a href="https://vaadin.com/router">Vaadin Router</a></td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>main-layout.ts</code></td><td>Main layout Web Component, contains the navigation menu, uses <a href="https://vaadin.com/components/vaadin-app-layout">App Layout</a></td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>server-layout.ts</code></td><td>Blank layout Web Component for server-side Java/Kotlin views</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>views/</code></td><td>UI views Web Components (TypeScript)</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>themes/</code></td><td>Custom  
 CSS styles</td></tr>
-  <tr><td><code>src/main/java/&lt;groupId&gt;/</code></td><td>Server-side 
+  <tr><td><code>src/main/java/com/cubetiqs/fusion</code></td><td>Server-side 
 source directory, contains the server-side Java views</td></tr>
-  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>Application.java</code></td><td>Server entry-point</td></tr>
+  <tr><td><code>src/main/kotlin/com/cubetiqs/fusion</code></td><td>Server-side 
+source directory, contains the server-side Kotlin views</td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>Application.kt</code></td><td>Server entry-point</td></tr>
 </table>
 
 ## Deploying using Docker
