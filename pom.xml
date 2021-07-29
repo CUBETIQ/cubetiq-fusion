@@ -42,7 +42,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>CUBETIQ Directory</id>
-            <url>https://nexus.kh.cubetiqs.com/repository/maven/</url>
+            <url>https://m.ctdn.net</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
